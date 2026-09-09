@@ -26,8 +26,9 @@ setup:
   version: 3.7
   # Version tag -> used for automatic versioning
 
-  dataset: igmr_universal_dataset_v4
-  # Name of the dataset (must match a dataset in project_name/Datasets)
+  dataset:
+    family: igmr_universal_dataset
+    name: v4
 
 # ------------------------------------------------------------
 # Core training parameters
