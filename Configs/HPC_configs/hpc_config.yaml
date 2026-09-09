@@ -1,0 +1,57 @@
+# ============================================================
+# Example HPC / SLURM configuration for YOLO training
+# ============================================================
+# This config defines:
+# - SLURM job metadata
+# - resource requirements (GPU, CPU, memory)
+# - runtime constraints and safety settings
+#
+# IMPORTANT:
+# - This file is cluster-specific
+# - Values must match the available SLURM partitions
+# ============================================================
+
+# ------------------------------------------------------------
+# Job metadata & logging
+# ------------------------------------------------------------
+job:
+  name: yolo-train
+  # Name of the SLURM job
+  # Appears in squeue, sacct and job monitoring tools
+
+  log_dir: slurm_logs
+  # Directory where SLURM stdout/stderr logs are written
+  # Should exist or be creatable at runtime
+
+# ------------------------------------------------------------
+# SLURM resource configuration
+# ------------------------------------------------------------
+slurm:
+  partition: c23g
+  # SLURM partition / queue to submit the job to -> must exist on the cluster
+  # Must support GPU jobs if gpus_per_node > 0
+
+  nodes: 1
+  # Number of compute nodes
+  # YOLO training is usually single-node
+
+  gpus_per_node: 1
+  # Number of GPUs requested per node
+  # Increase only if using multi-GPU (DDP) training
+
+  cpus_per_task: 4
+  # Number of CPU cores allocated to the job
+  # Used mainly for data loading and preprocessing
+
+  mem_gb: 64
+  # Total system memory (RAM) in gigabytes
+  # Should be sufficient for dataset caching and augmentation
+
+  timeout_min: 500
+  # Maximum wall-clock runtime in minutes
+  # Job will be terminated if this limit is exceeded
+
+  signal_delay_s: 120
+  # Time (in seconds) between SLURM sending SIGTERM
+  # and forcefully killing the job (SIGKILL)
+  # Allows graceful shutdown and checkpoint saving

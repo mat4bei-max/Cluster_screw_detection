@@ -1,0 +1,44 @@
+### Configuration for yolo training script
+
+# Setup for new Model
+setup:
+  yolo_base_model: yolo11n.yaml
+  model_name: Miele_detection
+  version: 1.6 
+  dataset: igmr_dataset_miele_v2
+
+# Parameters that define model training
+training_params:
+  epochs: 1
+  batch_size: 8
+  learning_rate: 0.005
+  optimizer: AdamW
+  img_size: 640
+  multi_scale: true
+  weight_decay: 0.0005
+  seed: 42
+
+# Parameters related to device used for training
+runtime_settings:
+  device: 0   # Devide for Training (0~GPU, None~CPU) -> Make sure to have the correct CUDA version installed for gpu usage
+  workers: 0  # Multiprocessing (0 for Windows/ 4,8,16 else)
+  amp: true  # Automatic Mixed Precision (TRUE ~ faster Training / FALSE ~ more stabil)
+
+# (Optional) parameters to specify which augmentations yolo performes
+augmentation_config:
+  augmentation: True
+  flipud: ~
+  fliplr: ~
+  mosaic: ~
+  mixup: ~
+  hsv_h: ~
+  hsv_s: ~
+  hsv_v: ~
+
+# Hydra-specific settings
+hydra:
+  run:
+    dir: .
+  output_subdir: null  
+  job:
+    chdir: false

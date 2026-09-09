@@ -1,0 +1,114 @@
+# Online Generator Config for yolo_manager
+# Real-time image generation when loading samples (no pre-processing)
+
+setup:
+  # Central dataset configuration
+  data: Synthetic_screws
+  num_synthetic_train_samples: 300
+
+
+placement:
+  # Object placement configuration
+  objects_per_image:
+    min: 0
+    max: 8
+
+  # Enabaling ensures usage of all objects and backgrounds in a cyclic manner, even if the number of samples exceeds the available assets.  
+  enable_shuffle_cycle:
+    objects: true
+    backgrounds: true
+
+  # Zone-based placement constraints
+  placement_zones:
+    activate: false
+    zone_values:
+      # pixel_value: brightness level in mask (0=black, 255=white)
+      # probability: likelihood of placing objects in this zone
+      # tolerance: acceptable pixel value range around specified value
+      - pixel_value: 0
+        probability: 0.0      # Forbidden zones
+        tolerance: 0
+      - pixel_value: 127
+        probability: 0.2      # Low probability zones
+        tolerance: 3
+      - pixel_value: 255
+        probability: 1.0      # Preferred placement zones
+        tolerance: 3
+
+  # Rules for object transformation and validation
+  placement_rules:
+    scale_range: [0.6, 1.1]           # Min/max object scale multiplier
+    rotation_range: [-180, 180]       # Min/max rotation in degrees
+    min_bbox_size_px: 18              # Minimum bounding box size in pixels
+    min_center_distance_px: 40        # Minimum distance between object centers
+
+compositing:
+  # Object blending and appearance
+  opacity: 1.0                        # Overall object opacity (0.0-1.0)
+
+  edge_feathering:
+    enabled: true
+    kernel_size: 2                    # Feathering kernel size
+    sigma: 1                          # Gaussian blur sigma
+
+  edge_blur:
+    enabled: true
+    kernel_size: 3                    # Additional edge blur kernel
+
+  color_harmonization:
+    enabled: true
+    strength: 0.3                     # Blend object color toward background (0.0-1.0)
+      
+
+augmentation:
+  # Background image augmentations
+  background:
+    resolution:
+      # Aspect-preserving limits used only without target_width/height. Use either min_side or max_side, not both.
+      # Important for size ratio of objects to background. Final size for training is determined by img_size in setup.
+      min_side:
+      max_side: 1600
+
+    brightness_contrast:
+      enabled: true
+      probability: 0.3                # Chance to apply augmentation
+      limits: [-0.15, 0.15]           # Min/max adjustment range
+
+    blur:
+      enabled: true
+      probability: 0.1
+      kernel_size: 3
+
+    noise:
+      enabled: true
+      probability: 0.05
+      var_limit: [5.0, 10.0]          # Gaussian noise variance range
+
+    hsv_shift:
+      enabled: true
+      probability: 0.2
+      limits: [10, 10, 10]            # [hue, saturation, value] shift range
+
+  # Object-level augmentations
+  objects:
+    brightness_contrast:
+      enabled: true
+      probability: 0.2
+      limits: [-0.15, 0.15]
+
+    blur:
+      enabled: true
+      probability: 0.05
+      kernel_size: 2
+
+    noise:
+      enabled: true
+      probability: 0.05
+      var_limit: [5.0, 10.0]
+    
+    # Reduces halo artifacts around objects by blending edges with the background
+    anti_halo:
+      enabled: true
+      edge_width_px: 2                  # Width of edge region for halo detection
+      dark_edge_luminance_delta: 5      # Luminance difference threshold for dark edges
+      blend_strength: 0.3               # Strength of halo blending (0.0-1.0)

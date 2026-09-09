@@ -1,0 +1,48 @@
+# ============================================================
+# Example YOLO evaluation configuration
+# ============================================================
+# This config uses logical names from the standard project
+# structure instead of direct file paths.
+# ============================================================
+
+# ------------------------------------------------------------
+# Evaluation, model & dataset setup
+# ------------------------------------------------------------
+setup:
+  evaluation_name: torx_finetuning_eval
+  # Output folder under Models/
+
+  model_name: Aubac_torx_detection
+  # Model family folder under Models/
+
+  version: 3.0
+  # Model version folder is resolved as Models/<model_name>/<model_name>_v<version>
+
+  dataset: igmr_torx_finetune_dataset_v3
+  # Dataset folder under Datasets/
+
+  split: test
+  # Dataset split to evaluate: val or test
+
+# ------------------------------------------------------------
+# Model checkpoint selection
+# ------------------------------------------------------------
+model:
+  weights: last.pt
+  # Checkpoint file under Run/weights, e.g. best.pt or last.pt
+
+# ------------------------------------------------------------
+# Validation parameters passed to Ultralytics model.val()
+# ------------------------------------------------------------
+validation_params:
+  imgsz: 1280
+  # Image size for validation
+
+  batch: 2
+  # Batch size
+
+  conf: 0.5
+  # Confidence threshold
+
+  iou: 0.7
+  # IoU threshold for NMS

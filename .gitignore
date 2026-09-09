@@ -1,0 +1,63 @@
+# Ignore local files
+local/
+slurm_logs/
+
+# ----------------------------
+# Python
+# ----------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ----------------------------
+# OS files
+# ----------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----------------------------
+# Jupyter / Notebooks
+# ----------------------------
+.ipynb_checkpoints
+
+# ----------------------------
+# Model outputs / training results
+# ----------------------------
+*.log
+*.ckpt
+
+# ----------------------------
+# Python package / build
+# ----------------------------
+build/
+dist/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+*.whl
+
+# ----------------------------
+# Misc
+# ----------------------------
+*.bak
+*.tmp
+*.swp
+*.swo
+*.sh
+*.db

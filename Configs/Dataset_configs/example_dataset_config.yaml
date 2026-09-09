@@ -1,0 +1,23 @@
+dataset:
+  name: dataset_name
+  version: 1
+
+# List of data sources or scenarios -> Dirs inside Data/
+sources: 
+  include:
+    - scenario_A
+    - scenario_B
+
+# split ratios for train/val/test -> must sum to 1.0
+split:
+  train: 0.7
+  val: 0.2
+  test: 0.1
+
+# class mappings: class_name: class_id -> must match labels in annotation files across all sources
+classes:
+  class_A: 0
+
+# shuffle settings
+shuffle:
+  seed: 42
