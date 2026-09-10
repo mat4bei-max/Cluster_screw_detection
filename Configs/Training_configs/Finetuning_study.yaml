@@ -16,14 +16,11 @@
 # Model & dataset setup
 # ------------------------------------------------------------
 setup:
-  yolo_base_model:
-    model_name: Universal_screw_detection
-    version: 3.7
-    weights: best.pt
+  yolo_base_model: yolo26s.pt
   # Base YOLO architecture definition (e.g. n~nano, s~small, m~medium)
   # Smaller models train faster but have lower capacity
 
-  trainability_policy: backbone_frozen
+  trainability_policy: head_and_last_stage
   # Fine-tuning policy:
   # full, head_only, neck_head, head_and_last_stage, backbone_frozen,
   # custom_prefixes
@@ -32,7 +29,7 @@ setup:
   model_name: Finetuning_study
   # Model name
 
-  version: 1.0
+  version: 0.3
   # Version tag -> used for automatic versioning
 
   dataset:
@@ -63,7 +60,7 @@ training_params:
   # Number of images per batch
   # Limited by GPU memory; larger batches give smoother gradients (-1 for automatic)
 
-  learning_rate: 1e-5
+  learning_rate: 0.008
   # Initial learning rate
   # Too high → unstable training, too low → slow convergence
 
@@ -79,11 +76,11 @@ training_params:
   # Randomly varies image size during training
   # Improves robustness across scales but slightly slows training
 
-  weight_decay: 1e-5
+  weight_decay: 0.0005
   # L2 regularization strength
   # Helps prevent overfitting, especially on small datasets
 
-  seed: 641230
+  seed: 41252
   # Random seed for reproducibility
   # Affects data shuffling, augmentation randomness, initialization
 

@@ -38,7 +38,7 @@ training_params:
   # Total number of training epochs
   # High values allow convergence, especially for large datasets
 
-  batch_size: -1
+  batch_size: 8
   # Number of images per batch
   # Limited by GPU memory; larger batches give smoother gradients (-1 for automatic)
 
