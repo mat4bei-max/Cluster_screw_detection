@@ -1,12 +1,7 @@
-# hpc_config.yaml
+﻿# hpc_config.yaml
 job:
   name: yolo-train
   log_dir: slurm_logs   
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> 82a355e (restructuring)
 slurm:
   partition: c23g
   nodes: 1
@@ -14,9 +9,5 @@ slurm:
   cpus_per_task: 4
   mem_gb: 32
   timeout_min: 120        
-<<<<<<< HEAD
   signal_delay_s: 120
 
-=======
-  signal_delay_s: 120
->>>>>>> 82a355e (restructuring)

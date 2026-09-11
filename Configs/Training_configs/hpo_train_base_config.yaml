@@ -1,4 +1,4 @@
-# ============================================================
+﻿# ============================================================
 # Example YOLO training configuration
 # ============================================================
 # This config defines:
@@ -20,14 +20,17 @@ setup:
   # Base YOLO architecture definition (e.g. n~nano, s~small, m~medium)
   # Smaller models train faster but have lower capacity
 
-  model_name: Miele_detection
+  experiment_group: Miele_detection
   # Model name
 
-  version: 1.8
+  experiment_name: 1.8
   # Version tag -> used for automatic versioning
 
   dataset: igmr_large_screw_dataset_v1
   # Name of the dataset (must match a dataset in project_name/Datasets)
+
+experiment_series:
+  enable: false
 
 # ------------------------------------------------------------
 # Core training parameters
@@ -43,7 +46,7 @@ training_params:
 
   learning_rate: 0.005
   # Initial learning rate
-  # Too high → unstable training, too low → slow convergence
+  # Too high â†’ unstable training, too low â†’ slow convergence
 
   optimizer: AdamW
   # Optimizer choice: SGD, Adam, AdamW
@@ -71,18 +74,18 @@ training_params:
 runtime_settings:
   device: 0
   # Training device:
-  # 0,1,2,... → GPU index
-  # None      → CPU (very slow for YOLO)
+  # 0,1,2,... â†’ GPU index
+  # None      â†’ CPU (very slow for YOLO)
 
   workers: 2
   # Number of dataloader worker processes
   # 0 recommended for Windows
-  # 4–16 recommended for Linux depending on CPU
+  # 4â€“16 recommended for Linux depending on CPU
 
   amp: true
   # Automatic Mixed Precision (FP16)
-  # true  → faster training & lower memory usage
-  # false → more numerical stability (rarely needed)
+  # true  â†’ faster training & lower memory usage
+  # false â†’ more numerical stability (rarely needed)
 
 # ------------------------------------------------------------
 # Data augmentation configuration
@@ -120,3 +123,4 @@ augmentation_config:
   hsv_v: 0.4
   # Value (brightness) augmentation strength
   # Helps with varying illumination conditions
+

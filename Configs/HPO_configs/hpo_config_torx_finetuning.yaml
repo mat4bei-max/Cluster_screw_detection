@@ -1,4 +1,4 @@
-# ============================================================
+﻿# ============================================================
 # Example HPO configuration for YOLO training with Optuna
 # ============================================================
 # This config defines:
@@ -90,7 +90,7 @@ search_space:
     high: 20
     step: 4
 
-  setup.trainability_policy:
+  training_params.trainability_policy:
     type: categorical
     choices: [full, backbone_frozen, neck_head, head_and_last_stage, head_only]
     # Optional fine-tuning policy search

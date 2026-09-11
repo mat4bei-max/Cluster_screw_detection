@@ -1,23 +1,23 @@
-# Model Card: *Model_name* (Overview of All Versions)
+# Experiment Group Card: *Experiment_group* (Overview of Experiments)
 
 ---
 
 ## 1. Overview
 
 > **Model description**  
-> Short general description of the model family, independent of any specific version.  
+> Short general description of the experiment group, independent of any specific run.  
 > Example: *This model performs object detection under various production conditions and has been improved over multiple development cycles.*
 
 **Model Type:** General model type (e.g., YOLO-based object detector)  
 **First Release:** <date>  
 **Last Update:** <date>  
-**Current Stable Version:** <vX.Y.Z>
+**Current Stable Experiment:** <experiment_name>
 
 ---
 
 ## 3. High-Level Training Procedure
 
-> **Not version-specific**, but a general description.
+> **Not run-specific**, but a general description.
 
 - Overall training pipeline  
 - Frameworks / libraries used  
@@ -36,30 +36,30 @@ General points:
 - Shared dataset sources  
 - Globally consistent class definitions (if applicable)  
 - Typical dataset challenges and characteristics  
-- If versions used different dataset variants:  
-  *“Some versions use extended dataset variants with additional scenarios/classes.”*
+- If experiments used different dataset variants:
+  *Some experiments use extended dataset variants with additional scenarios/classes.*
 
 ---
 
 ## 5. Performance Summary (Global)
 
-- General performance characteristics across versions  
+- General performance characteristics across experiments  
 - Scenarios where the model family is typically robust  
 - Global limitations  
-- Note: detailed metrics are available in each version-specific model card
+- Note: detailed metrics are available in each run-specific experiment card
 
 **Example**
-> *Across all versions, the model family shows strong detection performance under controlled lighting conditions.*  
+> *Across all experiments, the group shows strong detection performance under controlled lighting conditions.*  
 > *Challenges remain with reflective surfaces and extreme viewing angles.*
 
 ---
 
-## 6. Version History
+## 6. Experiment History
 ---
-High-level overview of all model versions (example table):
+High-level overview of all experiment runs (example table):
 
 **Example**
-| Version | Release Date | Key Changes | Notes |
+| Experiment | Date | Key Changes | Notes |
 |--------|--------------|-------------|-------|
 | v1.0 | 2024-01-10 | Initial release | Base dataset |
 | v1.1 | 2024-02-03 | Improved augmentations | Slight accuracy improvement |

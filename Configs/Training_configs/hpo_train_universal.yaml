@@ -1,8 +1,11 @@
-setup:
+﻿setup:
   yolo_base_model: yolo26s.pt
-  model_name: Universal_screw_detection
-  version: 3.6
+  experiment_group: Universal_screw_detection
+  experiment_name: 3.6
   dataset: igmr_universal_dataset_v3
+experiment_series:
+  enable: false
+
 training_params:
   target: 
     precision: 0.0
@@ -30,3 +33,4 @@ augmentation_config:
   hsv_h: 0.01
   hsv_s: 0.15
   hsv_v: 0.15
+

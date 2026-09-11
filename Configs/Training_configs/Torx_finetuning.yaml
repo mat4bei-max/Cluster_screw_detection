@@ -1,140 +1,50 @@
-# ============================================================
-# Example YOLO training configuration
-# ============================================================
-# This config defines:
-# - model setup and dataset selection
-# - training hyperparameters
-# - runtime / hardware-related settings
-# - augmentation behavior
-#
-# IMPORTANT:
-# - This is the BASE training configuration
-# - It may be overridden partially by an HPO config (e.g. Optuna)
-# ============================================================
+# YOLO training configuration for Torx fine-tuning.
 
-# ------------------------------------------------------------
-# Model & dataset setup
-# ------------------------------------------------------------
 setup:
   yolo_base_model:
-    model_name: Universal_screw_detection
-    version: 3.4
+    experiment_group: Universal_screw_detection
+    experiment_name: 3.4
     weights: best.pt
-  # Base YOLO architecture definition (e.g. n~nano, s~small, m~medium)
-  # Smaller models train faster but have lower capacity
 
-  trainability_policy: backbone_frozen
-  # Fine-tuning policy:
-  # full, head_only, neck_head, head_and_last_stage, backbone_frozen,
-  # custom_prefixes
-  # See Configs/Training_configs/trainability_policies.yaml
+  experiment_group: Aubac_torx_detection
+  experiment_name: 3.0
 
-  model_name: Aubac_torx_detection
-  # Model name
+dataset:
+  family: igmr_torx_finetune_dataset
+  name: v3
 
-  version: 3.0
-  # Version tag -> used for automatic versioning
+experiment_series:
+  enable: false
 
-  dataset: igmr_torx_finetune_dataset_v3
-  # Name of the dataset (must match a dataset in project_name/Datasets)
-
-# ------------------------------------------------------------
-# Core training parameters
-# ------------------------------------------------------------
 training_params:
-  target: 
+  trainability_policy: backbone_frozen
+
+  target:
     precision: 0.0
     recall: 0.6
     map50: 0.0
     map50_95: 0.4
-  # Optional custom fitness target for best.pt and early stopping.
-  # If null/missing, Ultralytics default is used: mAP50-95 only.
-
 
   epochs: 300
-  # Total number of training epochs
-  # High values allow convergence, especially for large datasets
-
   batch_size: 2
-  # Number of images per batch
-  # Limited by GPU memory; larger batches give smoother gradients (-1 for automatic)
-
   learning_rate: 5e-5
-  # Initial learning rate
-  # Too high → unstable training, too low → slow convergence
-
   optimizer: AdamW
-  # Optimizer choice: SGD, Adam, AdamW
-  # AdamW is generally a safe default for YOLO
-
   img_size: 1280
-  # Input image resolution (must be multiple of 32)
-  # Higher values improve small-object detection but increase memory usage
-
   multi_scale: false
-  # Randomly varies image size during training
-  # Improves robustness across scales but slightly slows training
-
   weight_decay: 1e-6
-  # L2 regularization strength
-  # Helps prevent overfitting, especially on small datasets
-
   seed: 5648
-  # Random seed for reproducibility
-  # Affects data shuffling, augmentation randomness, initialization
 
-# ------------------------------------------------------------
-# Runtime & hardware settings
-# ------------------------------------------------------------
 runtime_settings:
   device: 0
-  # Training device:
-  # 0,1,2,... → GPU index
-  # None      → CPU (very slow for YOLO)
-
   workers: 8
-  # Number of dataloader worker processes
-  # 0 recommended for Windows
-  # 4–16 recommended for Linux depending on CPU
-
   amp: true
-  # Automatic Mixed Precision (FP16)
-  # true  → faster training & lower memory usage
-  # false → more numerical stability (rarely needed)
 
-# ------------------------------------------------------------
-# Data augmentation configuration
-# ------------------------------------------------------------
 augmentation_config:
   augmentation: true
-  # Global switch for all augmentations
-  # false disables ALL augmentations below
-
   flipud: 0.3
-  # Vertical flip probability
-  # Usually disabled for natural images (cars, people, animals)
-
   fliplr: 0.5
-  # Horizontal flip probability
-  # Very common and safe augmentation
-
   mosaic: 0.3
-  # Mosaic augmentation probability
-  # Combines 4 images into one
-  # Powerful for small-object detection but may slow convergence
-
   mixup: 0.1
-  # MixUp augmentation probability
-  # Improves generalization but can hurt localization accuracy
-
   hsv_h: 0.02
-  # Hue augmentation strength
-  # Small values are sufficient; too high distorts colors
-
   hsv_s: 0.2
-  # Saturation augmentation strength
-  # Improves robustness to lighting and camera differences
-
   hsv_v: 0.2
-  # Value (brightness) augmentation strength
-  # Helps with varying illumination conditions

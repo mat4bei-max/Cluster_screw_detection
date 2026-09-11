@@ -1,4 +1,4 @@
-# ============================================================
+﻿# ============================================================
 # Example YOLO evaluation configuration
 # ============================================================
 # This config uses logical names from the standard project
@@ -10,13 +10,13 @@
 # ------------------------------------------------------------
 setup:
   evaluation_name: torx_finetuning_eval
-  # Output folder under Models/
+  # Output folder under Experiments/
 
-  model_name: Aubac_torx_detection
-  # Model family folder under Models/
+  experiment_group: Aubac_torx_detection
+  # Model family folder under Experiments/
 
-  version: 3.0
-  # Model version folder is resolved as Models/<model_name>/<model_name>_v<version>
+  experiment_name: 3.0
+  # Model version folder is resolved as Experiments/<experiment_group>/<experiment_name>
 
   dataset: igmr_torx_finetune_dataset_v3
   # Dataset folder under Datasets/
@@ -46,3 +46,4 @@ validation_params:
 
   iou: 0.7
   # IoU threshold for NMS
+

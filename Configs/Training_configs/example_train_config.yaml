@@ -1,80 +1,62 @@
-<<<<<<< HEAD
-=======
+﻿# ============================================================
 # Example YOLO training configuration
->>>>>>> 82a355e (restructuring)
-### Configuration for yolo training script
+# ============================================================
+# This config defines:
+# - model setup and dataset selection
+# - training hyperparameters
+# - runtime / hardware-related settings
+# - augmentation behavior
+#
+# IMPORTANT:
+# - This is the BASE training configuration
+# - It may be overridden partially by an HPO config (e.g. Optuna)
+# ============================================================
 
-# Setup for new Model
+# ------------------------------------------------------------
+# Model & dataset setup
+# ------------------------------------------------------------
 setup:
   yolo_base_model: yolo11s.yaml
-<<<<<<< HEAD
-  model_name: Screw_Detection_Model
-  version: 1.0
-  dataset: igmr_dataset_v2
+  # Base YOLO architecture definition (e.g. n~nano, s~small, m~medium)
+  # Smaller models train faster but have lower capacity
+  # Alternative: fine-tune from a managed project model checkpoint:
+  # yolo_base_model:
+  #   experiment_group: Existing_Experiment_Group
+  #   experiment_name: 1.0
+  #   weights: best  # best, best.pt, last, or last.pt
 
-# Parameters that define model training
+  experiment_group: Experiment_Group
+  # Experiment group folder under Experiments/
+
+  experiment_name: 1.0
+  # Experiment name folder under Experiments/<experiment_group>/
+  # This can still be used like a version tag
+
+dataset:
+  family: Dataset_Family
+  # Dataset family folder below project_name/Datasets
+
+  name: Dataset_Name
+  # Dataset folder below project_name/Datasets/<family>
+
+experiment_series:
+  enable: false
+  # true enables series mode and creates multiple runs below the experiment name
+
+  mode: grid
+  # grid: run all combinations of set-valued parameters, e.g. lr: {0.001, 0.01}
+  # sample: sample experiment_series.sample_runs combinations from the grid
+
+  sample_runs: null
+  # Required only for mode: sample
+
+  seed_repeats: 1
+  # Re-run each parameter combination with generated seeds derived from
+  # training_params.seed
+
+# ------------------------------------------------------------
+# Core training parameters
+# ------------------------------------------------------------
 training_params:
-  epochs: 100
-  batch_size: 16
-=======
-  model_name: Model_Name
-  version: 1.0
-  dataset: Dataset_Name
+  trainability_policy: full
 
-# Parameters that define model training
-training_params:
-  epochs: 300
-  batch_size: 16
-<<<<<<<< HEAD:Training/config/example_config.yaml
->>>>>>> 82a355e (restructuring)
-  learning_rate: 0.001
-  optimizer: AdamW
-  img_size: 640
-  multi_scale: true
-  weight_decay: 0.0005
-  seed: 42
-<<<<<<< HEAD
-
-# Parameters related to device used for training
-runtime_settings:
-  device: 0   # Devide for Training (0~GPU, None~CPU)
-  workers: 0  # Multiprocessing (0 for Windows/ 4,8,16 else)
-  amp: true  # Automatic Mixed Precision (TRUE ~ faster Training / FALSE ~ more stabil)
-=======
-========
-  learning_rate: 0.005
-  optimizer: AdamW
-  img_size: 640           # Multiple of 32!
-  multi_scale: true
-  weight_decay: 0.0005
-  seed: 333
->>>>>>>> 82a355e (restructuring):Configs/Training_configs/example_train_config.yaml
-
-# Parameters related to device used for training
-runtime_settings:
-  device: 0   # Devide for Training (0~GPU, None~CPU) -> correct pytorch needs to be installed for gpu usage
-  workers: 0  # Multiprocessing (0 for Windows/ 4,8,16 else)
-  amp: true   # Automatic Mixed Precision (TRUE ~ faster Training / FALSE ~ more stabil)
->>>>>>> 82a355e (restructuring)
-
-# (Optional) parameters to specify which augmentations yolo performes
-augmentation_config:
-  augmentation: True
-  flipud: ~
-  fliplr: ~
-  mosaic: ~
-  mixup: ~
-  hsv_h: ~
-  hsv_s: ~
-  hsv_v: ~
-<<<<<<< HEAD
-
-# Hydra-specific settings
-hydra:
-  job:
-    chdir: false
-  run:
-    dir: .
-  output_subdir: .hydra
-=======
->>>>>>> 82a355e (restructuring)

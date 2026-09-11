@@ -1,4 +1,4 @@
-# ============================================================
+﻿# ============================================================
 # Example YOLO training configuration
 # ============================================================
 # This config defines:
@@ -20,15 +20,18 @@ setup:
   # Base YOLO architecture definition (e.g. n~nano, s~small, m~medium)
   # Smaller models train faster but have lower capacity
 
-  model_name: Universal_screw_detection
+  experiment_group: Universal_screw_detection
   # Model name
 
-  version: 3.7
+  experiment_name: 3.7
   # Version tag -> used for automatic versioning
 
   dataset:
     family: igmr_universal_dataset
     name: v4
+
+experiment_series:
+  enable: false
 
 # ------------------------------------------------------------
 # Core training parameters
@@ -44,7 +47,7 @@ training_params:
 
   learning_rate: 0.008
   # Initial learning rate
-  # Too high → unstable training, too low → slow convergence
+  # Too high â†’ unstable training, too low â†’ slow convergence
 
   optimizer: AdamW
   # Optimizer choice: SGD, Adam, AdamW
@@ -72,18 +75,18 @@ training_params:
 runtime_settings:
   device: 0
   # Training device:
-  # 0,1,2,... → GPU index
-  # None      → CPU (very slow for YOLO)
+  # 0,1,2,... â†’ GPU index
+  # None      â†’ CPU (very slow for YOLO)
 
   workers: 8
   # Number of dataloader worker processes
   # 0 recommended for Windows
-  # 4–16 recommended for Linux depending on CPU
+  # 4â€“16 recommended for Linux depending on CPU
 
   amp: true
   # Automatic Mixed Precision (FP16)
-  # true  → faster training & lower memory usage
-  # false → more numerical stability (rarely needed)
+  # true  â†’ faster training & lower memory usage
+  # false â†’ more numerical stability (rarely needed)
 
 # ------------------------------------------------------------
 # Data augmentation configuration
@@ -121,3 +124,4 @@ augmentation_config:
   hsv_v: 0.15
   # Value (brightness) augmentation strength
   # Helps with varying illumination conditions
+
