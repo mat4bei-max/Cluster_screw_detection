@@ -7,7 +7,7 @@ setup:
     weights: best.pt
 
   experiment_group: Finetuning_study
-  experiment_name: Finetuning_hp_series_test
+  experiment_name: Finetuning_hp_series
 
 dataset:
   family: finetuning_study
@@ -20,8 +20,7 @@ experiment_series:
   seed_repeats: 2
 
 training_params:
-  trainability_policy: {head_only, backbone_frozen}
-  # , head_and_last_stage, neck_head,
+  trainability_policy: {head_only, head_and_last_stage, neck_head, backbone_frozen}
 
   target:
     precision: 0.0
@@ -31,14 +30,12 @@ training_params:
 
   epochs: 1000
   batch_size: 2
-  learning_rate: 0.001
-  #learning_rate: {0.01, 0.001, 0.0001, 0.00001}
+  learning_rate: {0.01, 0.001, 0.0001, 0.00001}
   optimizer: AdamW
   img_size: 1280
   multi_scale: false
-  weight_decay: 0.0
-  #weight_decay: {0.0, 0.001}
-  seed: 7195321
+  weight_decay: {0.0, 0.001}
+  seed: 65875
 
 runtime_settings:
   device: 0

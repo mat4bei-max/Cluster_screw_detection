@@ -1,0 +1,860 @@
+{
+  "experiment_group": "Finetuning_study",
+  "experiment_name": "Finetuning_hp_series",
+  "mode": "grid",
+  "seed_repeats": 2,
+  "parameter_combination_count": 32,
+  "total_runs": 64,
+  "parameters": {
+    "training_params.trainability_policy": [
+      "head_only",
+      "head_and_last_stage",
+      "neck_head",
+      "backbone_frozen"
+    ],
+    "training_params.learning_rate": [
+      0.01,
+      0.001,
+      0.0001,
+      1e-05
+    ],
+    "training_params.weight_decay": [
+      0.0,
+      0.001
+    ]
+  },
+  "runs": [
+    {
+      "run_id": "run_001",
+      "combo_index": 1,
+      "seed_repeat": 1,
+      "seed": 941800892,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_001",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 941800892
+      }
+    },
+    {
+      "run_id": "run_002",
+      "combo_index": 1,
+      "seed_repeat": 2,
+      "seed": 1781260929,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_002",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 1781260929
+      }
+    },
+    {
+      "run_id": "run_003",
+      "combo_index": 2,
+      "seed_repeat": 1,
+      "seed": 1095435656,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_003",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1095435656
+      }
+    },
+    {
+      "run_id": "run_004",
+      "combo_index": 2,
+      "seed_repeat": 2,
+      "seed": 302914985,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_004",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 302914985
+      }
+    },
+    {
+      "run_id": "run_005",
+      "combo_index": 3,
+      "seed_repeat": 1,
+      "seed": 337436412,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_005",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 337436412
+      }
+    },
+    {
+      "run_id": "run_006",
+      "combo_index": 3,
+      "seed_repeat": 2,
+      "seed": 1084172679,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_006",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 1084172679
+      }
+    },
+    {
+      "run_id": "run_007",
+      "combo_index": 4,
+      "seed_repeat": 1,
+      "seed": 2018226899,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_007",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 2018226899
+      }
+    },
+    {
+      "run_id": "run_008",
+      "combo_index": 4,
+      "seed_repeat": 2,
+      "seed": 1238126744,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_008",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1238126744
+      }
+    },
+    {
+      "run_id": "run_009",
+      "combo_index": 5,
+      "seed_repeat": 1,
+      "seed": 618759150,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_009",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 618759150
+      }
+    },
+    {
+      "run_id": "run_010",
+      "combo_index": 5,
+      "seed_repeat": 2,
+      "seed": 2125939095,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_010",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 2125939095
+      }
+    },
+    {
+      "run_id": "run_011",
+      "combo_index": 6,
+      "seed_repeat": 1,
+      "seed": 313355093,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_011",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 313355093
+      }
+    },
+    {
+      "run_id": "run_012",
+      "combo_index": 6,
+      "seed_repeat": 2,
+      "seed": 1278818215,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_012",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1278818215
+      }
+    },
+    {
+      "run_id": "run_013",
+      "combo_index": 7,
+      "seed_repeat": 1,
+      "seed": 1164794961,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_013",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 1164794961
+      }
+    },
+    {
+      "run_id": "run_014",
+      "combo_index": 7,
+      "seed_repeat": 2,
+      "seed": 405503548,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_014",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 405503548
+      }
+    },
+    {
+      "run_id": "run_015",
+      "combo_index": 8,
+      "seed_repeat": 1,
+      "seed": 1951517186,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_015",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1951517186
+      }
+    },
+    {
+      "run_id": "run_016",
+      "combo_index": 8,
+      "seed_repeat": 2,
+      "seed": 209545455,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_016",
+      "parameters": {
+        "training_params.trainability_policy": "head_only",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 209545455
+      }
+    },
+    {
+      "run_id": "run_017",
+      "combo_index": 9,
+      "seed_repeat": 1,
+      "seed": 510107334,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_017",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 510107334
+      }
+    },
+    {
+      "run_id": "run_018",
+      "combo_index": 9,
+      "seed_repeat": 2,
+      "seed": 34677595,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_018",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 34677595
+      }
+    },
+    {
+      "run_id": "run_019",
+      "combo_index": 10,
+      "seed_repeat": 1,
+      "seed": 393733721,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_019",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 393733721
+      }
+    },
+    {
+      "run_id": "run_020",
+      "combo_index": 10,
+      "seed_repeat": 2,
+      "seed": 1846487151,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_020",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1846487151
+      }
+    },
+    {
+      "run_id": "run_021",
+      "combo_index": 11,
+      "seed_repeat": 1,
+      "seed": 604215506,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_021",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 604215506
+      }
+    },
+    {
+      "run_id": "run_022",
+      "combo_index": 11,
+      "seed_repeat": 2,
+      "seed": 2144391428,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_022",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 2144391428
+      }
+    },
+    {
+      "run_id": "run_023",
+      "combo_index": 12,
+      "seed_repeat": 1,
+      "seed": 2023309017,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_023",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 2023309017
+      }
+    },
+    {
+      "run_id": "run_024",
+      "combo_index": 12,
+      "seed_repeat": 2,
+      "seed": 1723247330,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_024",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1723247330
+      }
+    },
+    {
+      "run_id": "run_025",
+      "combo_index": 13,
+      "seed_repeat": 1,
+      "seed": 1716619927,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_025",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 1716619927
+      }
+    },
+    {
+      "run_id": "run_026",
+      "combo_index": 13,
+      "seed_repeat": 2,
+      "seed": 618558110,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_026",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 618558110
+      }
+    },
+    {
+      "run_id": "run_027",
+      "combo_index": 14,
+      "seed_repeat": 1,
+      "seed": 699657436,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_027",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 699657436
+      }
+    },
+    {
+      "run_id": "run_028",
+      "combo_index": 14,
+      "seed_repeat": 2,
+      "seed": 1332761585,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_028",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1332761585
+      }
+    },
+    {
+      "run_id": "run_029",
+      "combo_index": 15,
+      "seed_repeat": 1,
+      "seed": 743047685,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_029",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 743047685
+      }
+    },
+    {
+      "run_id": "run_030",
+      "combo_index": 15,
+      "seed_repeat": 2,
+      "seed": 762290846,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_030",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 762290846
+      }
+    },
+    {
+      "run_id": "run_031",
+      "combo_index": 16,
+      "seed_repeat": 1,
+      "seed": 1040432676,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_031",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1040432676
+      }
+    },
+    {
+      "run_id": "run_032",
+      "combo_index": 16,
+      "seed_repeat": 2,
+      "seed": 1791807031,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_032",
+      "parameters": {
+        "training_params.trainability_policy": "head_and_last_stage",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1791807031
+      }
+    },
+    {
+      "run_id": "run_033",
+      "combo_index": 17,
+      "seed_repeat": 1,
+      "seed": 1914551327,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_033",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 1914551327
+      }
+    },
+    {
+      "run_id": "run_034",
+      "combo_index": 17,
+      "seed_repeat": 2,
+      "seed": 6815572,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_034",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 6815572
+      }
+    },
+    {
+      "run_id": "run_035",
+      "combo_index": 18,
+      "seed_repeat": 1,
+      "seed": 259995964,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_035",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 259995964
+      }
+    },
+    {
+      "run_id": "run_036",
+      "combo_index": 18,
+      "seed_repeat": 2,
+      "seed": 168867618,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_036",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 168867618
+      }
+    },
+    {
+      "run_id": "run_037",
+      "combo_index": 19,
+      "seed_repeat": 1,
+      "seed": 1653514268,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_037",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 1653514268
+      }
+    },
+    {
+      "run_id": "run_038",
+      "combo_index": 19,
+      "seed_repeat": 2,
+      "seed": 165910233,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_038",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 165910233
+      }
+    },
+    {
+      "run_id": "run_039",
+      "combo_index": 20,
+      "seed_repeat": 1,
+      "seed": 1831431945,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_039",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1831431945
+      }
+    },
+    {
+      "run_id": "run_040",
+      "combo_index": 20,
+      "seed_repeat": 2,
+      "seed": 2106757945,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_040",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 2106757945
+      }
+    },
+    {
+      "run_id": "run_041",
+      "combo_index": 21,
+      "seed_repeat": 1,
+      "seed": 1299357275,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_041",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 1299357275
+      }
+    },
+    {
+      "run_id": "run_042",
+      "combo_index": 21,
+      "seed_repeat": 2,
+      "seed": 1143075214,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_042",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 1143075214
+      }
+    },
+    {
+      "run_id": "run_043",
+      "combo_index": 22,
+      "seed_repeat": 1,
+      "seed": 1246201169,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_043",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1246201169
+      }
+    },
+    {
+      "run_id": "run_044",
+      "combo_index": 22,
+      "seed_repeat": 2,
+      "seed": 1781211660,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_044",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1781211660
+      }
+    },
+    {
+      "run_id": "run_045",
+      "combo_index": 23,
+      "seed_repeat": 1,
+      "seed": 1975833246,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_045",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 1975833246
+      }
+    },
+    {
+      "run_id": "run_046",
+      "combo_index": 23,
+      "seed_repeat": 2,
+      "seed": 1588621844,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_046",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 1588621844
+      }
+    },
+    {
+      "run_id": "run_047",
+      "combo_index": 24,
+      "seed_repeat": 1,
+      "seed": 1708213978,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_047",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1708213978
+      }
+    },
+    {
+      "run_id": "run_048",
+      "combo_index": 24,
+      "seed_repeat": 2,
+      "seed": 889908164,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_048",
+      "parameters": {
+        "training_params.trainability_policy": "neck_head",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 889908164
+      }
+    },
+    {
+      "run_id": "run_049",
+      "combo_index": 25,
+      "seed_repeat": 1,
+      "seed": 445160372,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_049",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 445160372
+      }
+    },
+    {
+      "run_id": "run_050",
+      "combo_index": 25,
+      "seed_repeat": 2,
+      "seed": 1186469439,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_050",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 1186469439
+      }
+    },
+    {
+      "run_id": "run_051",
+      "combo_index": 26,
+      "seed_repeat": 1,
+      "seed": 768980278,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_051",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 768980278
+      }
+    },
+    {
+      "run_id": "run_052",
+      "combo_index": 26,
+      "seed_repeat": 2,
+      "seed": 1467109414,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_052",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 0.01,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1467109414
+      }
+    },
+    {
+      "run_id": "run_053",
+      "combo_index": 27,
+      "seed_repeat": 1,
+      "seed": 674105666,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_053",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 674105666
+      }
+    },
+    {
+      "run_id": "run_054",
+      "combo_index": 27,
+      "seed_repeat": 2,
+      "seed": 2130735894,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_054",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 2130735894
+      }
+    },
+    {
+      "run_id": "run_055",
+      "combo_index": 28,
+      "seed_repeat": 1,
+      "seed": 1464515572,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_055",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1464515572
+      }
+    },
+    {
+      "run_id": "run_056",
+      "combo_index": 28,
+      "seed_repeat": 2,
+      "seed": 1410092275,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_056",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 0.001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1410092275
+      }
+    },
+    {
+      "run_id": "run_057",
+      "combo_index": 29,
+      "seed_repeat": 1,
+      "seed": 199718977,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_057",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 199718977
+      }
+    },
+    {
+      "run_id": "run_058",
+      "combo_index": 29,
+      "seed_repeat": 2,
+      "seed": 300885617,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_058",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 300885617
+      }
+    },
+    {
+      "run_id": "run_059",
+      "combo_index": 30,
+      "seed_repeat": 1,
+      "seed": 1134900474,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_059",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1134900474
+      }
+    },
+    {
+      "run_id": "run_060",
+      "combo_index": 30,
+      "seed_repeat": 2,
+      "seed": 886275922,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_060",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 0.0001,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 886275922
+      }
+    },
+    {
+      "run_id": "run_061",
+      "combo_index": 31,
+      "seed_repeat": 1,
+      "seed": 1338925819,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_061",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 1338925819
+      }
+    },
+    {
+      "run_id": "run_062",
+      "combo_index": 31,
+      "seed_repeat": 2,
+      "seed": 547265147,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_062",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.0,
+        "training_params.seed": 547265147
+      }
+    },
+    {
+      "run_id": "run_063",
+      "combo_index": 32,
+      "seed_repeat": 1,
+      "seed": 841577050,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_063",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 841577050
+      }
+    },
+    {
+      "run_id": "run_064",
+      "combo_index": 32,
+      "seed_repeat": 2,
+      "seed": 1342064403,
+      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series/runs/run_064",
+      "parameters": {
+        "training_params.trainability_policy": "backbone_frozen",
+        "training_params.learning_rate": 1e-05,
+        "training_params.weight_decay": 0.001,
+        "training_params.seed": 1342064403
+      }
+    }
+  ]
+}
