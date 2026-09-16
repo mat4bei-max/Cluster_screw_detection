@@ -5,6 +5,21 @@
   "seed_repeats": 2,
   "parameter_combination_count": 45,
   "total_runs": 90,
+  "ranking_metric": {
+    "path": "map",
+    "mode": "max"
+  },
+  "summary_metrics": [
+    "map50",
+    "mp",
+    "mr",
+    "f1"
+  ],
+  "artifact_policy": {
+    "keep_weights": "best",
+    "keep_test_metrics": false,
+    "keep_test_predictions": false
+  },
   "parameters": {
     "training_params.trainability_policy": [
       "head_only",
@@ -30,7 +45,7 @@
       "combo_index": 1,
       "seed_repeat": 1,
       "seed": 217858489,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_001",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_001",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.05,
@@ -43,7 +58,7 @@
       "combo_index": 1,
       "seed_repeat": 2,
       "seed": 2104392253,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_002",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_002",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.05,
@@ -56,7 +71,7 @@
       "combo_index": 2,
       "seed_repeat": 1,
       "seed": 1656133279,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_003",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_003",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.05,
@@ -69,7 +84,7 @@
       "combo_index": 2,
       "seed_repeat": 2,
       "seed": 569072222,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_004",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_004",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.05,
@@ -82,7 +97,7 @@
       "combo_index": 3,
       "seed_repeat": 1,
       "seed": 1970968705,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_005",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_005",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.05,
@@ -95,7 +110,7 @@
       "combo_index": 3,
       "seed_repeat": 2,
       "seed": 644929351,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_006",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_006",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.05,
@@ -108,7 +123,7 @@
       "combo_index": 4,
       "seed_repeat": 1,
       "seed": 459742809,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_007",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_007",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.01,
@@ -121,7 +136,7 @@
       "combo_index": 4,
       "seed_repeat": 2,
       "seed": 1031850005,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_008",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_008",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.01,
@@ -134,7 +149,7 @@
       "combo_index": 5,
       "seed_repeat": 1,
       "seed": 1007355452,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_009",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_009",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.01,
@@ -147,7 +162,7 @@
       "combo_index": 5,
       "seed_repeat": 2,
       "seed": 1582837904,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_010",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_010",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.01,
@@ -160,7 +175,7 @@
       "combo_index": 6,
       "seed_repeat": 1,
       "seed": 2130072329,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_011",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_011",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.01,
@@ -173,7 +188,7 @@
       "combo_index": 6,
       "seed_repeat": 2,
       "seed": 938855204,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_012",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_012",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.01,
@@ -186,7 +201,7 @@
       "combo_index": 7,
       "seed_repeat": 1,
       "seed": 971135284,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_013",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_013",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.005,
@@ -199,7 +214,7 @@
       "combo_index": 7,
       "seed_repeat": 2,
       "seed": 1913878136,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_014",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_014",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.005,
@@ -212,7 +227,7 @@
       "combo_index": 8,
       "seed_repeat": 1,
       "seed": 918418534,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_015",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_015",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.005,
@@ -225,7 +240,7 @@
       "combo_index": 8,
       "seed_repeat": 2,
       "seed": 95844077,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_016",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_016",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.005,
@@ -238,7 +253,7 @@
       "combo_index": 9,
       "seed_repeat": 1,
       "seed": 1238204499,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_017",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_017",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.005,
@@ -251,7 +266,7 @@
       "combo_index": 9,
       "seed_repeat": 2,
       "seed": 333905958,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_018",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_018",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.005,
@@ -264,7 +279,7 @@
       "combo_index": 10,
       "seed_repeat": 1,
       "seed": 2083068070,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_019",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_019",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.001,
@@ -277,7 +292,7 @@
       "combo_index": 10,
       "seed_repeat": 2,
       "seed": 145302033,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_020",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_020",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.001,
@@ -290,7 +305,7 @@
       "combo_index": 11,
       "seed_repeat": 1,
       "seed": 2069292262,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_021",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_021",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.001,
@@ -303,7 +318,7 @@
       "combo_index": 11,
       "seed_repeat": 2,
       "seed": 1503634309,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_022",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_022",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.001,
@@ -316,7 +331,7 @@
       "combo_index": 12,
       "seed_repeat": 1,
       "seed": 165981770,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_023",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_023",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.001,
@@ -329,7 +344,7 @@
       "combo_index": 12,
       "seed_repeat": 2,
       "seed": 1915087645,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_024",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_024",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.001,
@@ -342,7 +357,7 @@
       "combo_index": 13,
       "seed_repeat": 1,
       "seed": 580509691,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_025",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_025",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.0001,
@@ -355,7 +370,7 @@
       "combo_index": 13,
       "seed_repeat": 2,
       "seed": 189219581,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_026",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_026",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.0001,
@@ -368,7 +383,7 @@
       "combo_index": 14,
       "seed_repeat": 1,
       "seed": 1222717536,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_027",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_027",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.0001,
@@ -381,7 +396,7 @@
       "combo_index": 14,
       "seed_repeat": 2,
       "seed": 1201498760,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_028",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_028",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.0001,
@@ -394,7 +409,7 @@
       "combo_index": 15,
       "seed_repeat": 1,
       "seed": 1843044192,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_029",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_029",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.0001,
@@ -407,7 +422,7 @@
       "combo_index": 15,
       "seed_repeat": 2,
       "seed": 37819916,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_030",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_030",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.learning_rate": 0.0001,
@@ -420,7 +435,7 @@
       "combo_index": 16,
       "seed_repeat": 1,
       "seed": 347530469,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_031",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_031",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.05,
@@ -433,7 +448,7 @@
       "combo_index": 16,
       "seed_repeat": 2,
       "seed": 1496959511,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_032",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_032",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.05,
@@ -446,7 +461,7 @@
       "combo_index": 17,
       "seed_repeat": 1,
       "seed": 1137899065,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_033",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_033",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.05,
@@ -459,7 +474,7 @@
       "combo_index": 17,
       "seed_repeat": 2,
       "seed": 1142990823,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_034",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_034",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.05,
@@ -472,7 +487,7 @@
       "combo_index": 18,
       "seed_repeat": 1,
       "seed": 205191617,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_035",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_035",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.05,
@@ -485,7 +500,7 @@
       "combo_index": 18,
       "seed_repeat": 2,
       "seed": 1816535826,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_036",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_036",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.05,
@@ -498,7 +513,7 @@
       "combo_index": 19,
       "seed_repeat": 1,
       "seed": 1894972082,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_037",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_037",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.01,
@@ -511,7 +526,7 @@
       "combo_index": 19,
       "seed_repeat": 2,
       "seed": 1107683002,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_038",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_038",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.01,
@@ -524,7 +539,7 @@
       "combo_index": 20,
       "seed_repeat": 1,
       "seed": 416288064,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_039",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_039",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.01,
@@ -537,7 +552,7 @@
       "combo_index": 20,
       "seed_repeat": 2,
       "seed": 480069051,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_040",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_040",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.01,
@@ -550,7 +565,7 @@
       "combo_index": 21,
       "seed_repeat": 1,
       "seed": 56886014,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_041",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_041",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.01,
@@ -563,7 +578,7 @@
       "combo_index": 21,
       "seed_repeat": 2,
       "seed": 1113567874,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_042",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_042",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.01,
@@ -576,7 +591,7 @@
       "combo_index": 22,
       "seed_repeat": 1,
       "seed": 1464002203,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_043",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_043",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.005,
@@ -589,7 +604,7 @@
       "combo_index": 22,
       "seed_repeat": 2,
       "seed": 1080272962,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_044",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_044",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.005,
@@ -602,7 +617,7 @@
       "combo_index": 23,
       "seed_repeat": 1,
       "seed": 2055981328,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_045",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_045",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.005,
@@ -615,7 +630,7 @@
       "combo_index": 23,
       "seed_repeat": 2,
       "seed": 379658394,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_046",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_046",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.005,
@@ -628,7 +643,7 @@
       "combo_index": 24,
       "seed_repeat": 1,
       "seed": 1040640371,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_047",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_047",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.005,
@@ -641,7 +656,7 @@
       "combo_index": 24,
       "seed_repeat": 2,
       "seed": 654378078,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_048",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_048",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.005,
@@ -654,7 +669,7 @@
       "combo_index": 25,
       "seed_repeat": 1,
       "seed": 277907635,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_049",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_049",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.001,
@@ -667,7 +682,7 @@
       "combo_index": 25,
       "seed_repeat": 2,
       "seed": 950651848,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_050",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_050",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.001,
@@ -680,7 +695,7 @@
       "combo_index": 26,
       "seed_repeat": 1,
       "seed": 1915922620,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_051",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_051",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.001,
@@ -693,7 +708,7 @@
       "combo_index": 26,
       "seed_repeat": 2,
       "seed": 831784714,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_052",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_052",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.001,
@@ -706,7 +721,7 @@
       "combo_index": 27,
       "seed_repeat": 1,
       "seed": 1579412887,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_053",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_053",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.001,
@@ -719,7 +734,7 @@
       "combo_index": 27,
       "seed_repeat": 2,
       "seed": 422646439,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_054",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_054",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.001,
@@ -732,7 +747,7 @@
       "combo_index": 28,
       "seed_repeat": 1,
       "seed": 112469793,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_055",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_055",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.0001,
@@ -745,7 +760,7 @@
       "combo_index": 28,
       "seed_repeat": 2,
       "seed": 1829903883,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_056",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_056",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.0001,
@@ -758,7 +773,7 @@
       "combo_index": 29,
       "seed_repeat": 1,
       "seed": 2128232126,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_057",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_057",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.0001,
@@ -771,7 +786,7 @@
       "combo_index": 29,
       "seed_repeat": 2,
       "seed": 2010155452,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_058",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_058",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.0001,
@@ -784,7 +799,7 @@
       "combo_index": 30,
       "seed_repeat": 1,
       "seed": 251004415,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_059",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_059",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.0001,
@@ -797,7 +812,7 @@
       "combo_index": 30,
       "seed_repeat": 2,
       "seed": 296734729,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_060",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_060",
       "parameters": {
         "training_params.trainability_policy": "head_and_last_stage",
         "training_params.learning_rate": 0.0001,
@@ -810,7 +825,7 @@
       "combo_index": 31,
       "seed_repeat": 1,
       "seed": 591989460,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_061",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_061",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.05,
@@ -823,7 +838,7 @@
       "combo_index": 31,
       "seed_repeat": 2,
       "seed": 97699053,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_062",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_062",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.05,
@@ -836,7 +851,7 @@
       "combo_index": 32,
       "seed_repeat": 1,
       "seed": 1636509554,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_063",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_063",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.05,
@@ -849,7 +864,7 @@
       "combo_index": 32,
       "seed_repeat": 2,
       "seed": 1409665842,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_064",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_064",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.05,
@@ -862,7 +877,7 @@
       "combo_index": 33,
       "seed_repeat": 1,
       "seed": 1094154753,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_065",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_065",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.05,
@@ -875,7 +890,7 @@
       "combo_index": 33,
       "seed_repeat": 2,
       "seed": 480265600,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_066",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_066",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.05,
@@ -888,7 +903,7 @@
       "combo_index": 34,
       "seed_repeat": 1,
       "seed": 416784983,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_067",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_067",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.01,
@@ -901,7 +916,7 @@
       "combo_index": 34,
       "seed_repeat": 2,
       "seed": 395978618,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_068",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_068",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.01,
@@ -914,7 +929,7 @@
       "combo_index": 35,
       "seed_repeat": 1,
       "seed": 589202207,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_069",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_069",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.01,
@@ -927,7 +942,7 @@
       "combo_index": 35,
       "seed_repeat": 2,
       "seed": 632339101,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_070",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_070",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.01,
@@ -940,7 +955,7 @@
       "combo_index": 36,
       "seed_repeat": 1,
       "seed": 792958926,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_071",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_071",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.01,
@@ -953,7 +968,7 @@
       "combo_index": 36,
       "seed_repeat": 2,
       "seed": 926323442,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_072",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_072",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.01,
@@ -966,7 +981,7 @@
       "combo_index": 37,
       "seed_repeat": 1,
       "seed": 1470425397,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_073",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_073",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.005,
@@ -979,7 +994,7 @@
       "combo_index": 37,
       "seed_repeat": 2,
       "seed": 1443684659,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_074",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_074",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.005,
@@ -992,7 +1007,7 @@
       "combo_index": 38,
       "seed_repeat": 1,
       "seed": 1812323525,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_075",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_075",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.005,
@@ -1005,7 +1020,7 @@
       "combo_index": 38,
       "seed_repeat": 2,
       "seed": 1886342053,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_076",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_076",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.005,
@@ -1018,7 +1033,7 @@
       "combo_index": 39,
       "seed_repeat": 1,
       "seed": 1747073668,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_077",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_077",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.005,
@@ -1031,7 +1046,7 @@
       "combo_index": 39,
       "seed_repeat": 2,
       "seed": 842841973,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_078",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_078",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.005,
@@ -1044,7 +1059,7 @@
       "combo_index": 40,
       "seed_repeat": 1,
       "seed": 1371613781,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_079",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_079",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.001,
@@ -1057,7 +1072,7 @@
       "combo_index": 40,
       "seed_repeat": 2,
       "seed": 198935304,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_080",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_080",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.001,
@@ -1070,7 +1085,7 @@
       "combo_index": 41,
       "seed_repeat": 1,
       "seed": 232803490,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_081",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_081",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.001,
@@ -1083,7 +1098,7 @@
       "combo_index": 41,
       "seed_repeat": 2,
       "seed": 1891679685,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_082",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_082",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.001,
@@ -1096,7 +1111,7 @@
       "combo_index": 42,
       "seed_repeat": 1,
       "seed": 210642124,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_083",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_083",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.001,
@@ -1109,7 +1124,7 @@
       "combo_index": 42,
       "seed_repeat": 2,
       "seed": 813392582,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_084",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_084",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.001,
@@ -1122,7 +1137,7 @@
       "combo_index": 43,
       "seed_repeat": 1,
       "seed": 1461025814,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_085",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_085",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.0001,
@@ -1135,7 +1150,7 @@
       "combo_index": 43,
       "seed_repeat": 2,
       "seed": 592360528,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_086",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_086",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.0001,
@@ -1148,7 +1163,7 @@
       "combo_index": 44,
       "seed_repeat": 1,
       "seed": 1143016931,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_087",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_087",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.0001,
@@ -1161,7 +1176,7 @@
       "combo_index": 44,
       "seed_repeat": 2,
       "seed": 1701629806,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_088",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_088",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.0001,
@@ -1174,7 +1189,7 @@
       "combo_index": 45,
       "seed_repeat": 1,
       "seed": 1974012208,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_089",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_089",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.0001,
@@ -1187,7 +1202,7 @@
       "combo_index": 45,
       "seed_repeat": 2,
       "seed": 1366468183,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_2/runs/run_090",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_2\\runs\\run_090",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.learning_rate": 0.0001,
@@ -1195,5 +1210,6 @@
         "training_params.seed": 1366468183
       }
     }
-  ]
+  ],
+  "created_at": "2026-09-16T04:37:02.353346+00:00"
 }
