@@ -5,6 +5,21 @@
   "seed_repeats": 2,
   "parameter_combination_count": 2,
   "total_runs": 4,
+  "ranking_metric": {
+    "path": "map",
+    "mode": "max"
+  },
+  "summary_metrics": [
+    "map50",
+    "mp",
+    "mr",
+    "f1"
+  ],
+  "artifact_policy": {
+    "keep_weights": "best",
+    "keep_test_metrics": false,
+    "keep_test_predictions": false
+  },
   "parameters": {
     "training_params.trainability_policy": [
       "head_only",
@@ -17,7 +32,7 @@
       "combo_index": 1,
       "seed_repeat": 1,
       "seed": 850413605,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_test/runs/run_001",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_test\\runs\\run_001",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.seed": 850413605
@@ -28,7 +43,7 @@
       "combo_index": 1,
       "seed_repeat": 2,
       "seed": 319599118,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_test/runs/run_002",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_test\\runs\\run_002",
       "parameters": {
         "training_params.trainability_policy": "head_only",
         "training_params.seed": 319599118
@@ -39,7 +54,7 @@
       "combo_index": 2,
       "seed_repeat": 1,
       "seed": 674456093,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_test/runs/run_003",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_test\\runs\\run_003",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.seed": 674456093
@@ -50,11 +65,12 @@
       "combo_index": 2,
       "seed_repeat": 2,
       "seed": 1209617294,
-      "output_dir": "/home/beissner/DI/screw_detection/Experiments/Finetuning_study/Finetuning_hp_series_test/runs/run_004",
+      "output_dir": "cluster_screw_detection\\Experiments\\Finetuning_study\\Finetuning_hp_series_test\\runs\\run_004",
       "parameters": {
         "training_params.trainability_policy": "backbone_frozen",
         "training_params.seed": 1209617294
       }
     }
-  ]
+  ],
+  "created_at": "2026-09-16T03:41:09.340481+00:00"
 }

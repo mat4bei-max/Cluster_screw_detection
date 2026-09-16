@@ -1,0 +1,3 @@
+n_runs,parameter,parameter_label,value,display_label,map_mean,map_std,map_global_mean,map_delta_from_global,map_improvement
+2,training_params.trainability_policy,trainability_policy,head_only,trainability_policy=head_only,0.18583128825228412,0.0,0.24904151784320175,-0.06321022959091763,-0.06321022959091763
+2,training_params.trainability_policy,trainability_policy,backbone_frozen,trainability_policy=backbone_frozen,0.3122517474341194,0.0,0.24904151784320175,0.06321022959091763,0.06321022959091763

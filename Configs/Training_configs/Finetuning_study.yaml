@@ -18,10 +18,25 @@ experiment_series:
   mode: grid
   sample_runs: null
   seed_repeats: 2
+  artifacts:
+    keep_weights: best
+    keep_test_metrics: false
+    keep_test_predictions: false
+
+eval_metrics:
+  ranking_metric:
+    path: f1
+    mode: max
+  summary_metrics:
+    - map
+    - map50
+    - mp
+    - mr
+    - f1
 
 training_params:
   trainability_policy: {head_only, backbone_frozen}
-  # , head_and_last_stage, neck_head,
+  # , head_and_last_stage,
 
   target:
     precision: 0.0
@@ -54,3 +69,4 @@ augmentation_config:
   hsv_h: 0.01
   hsv_s: 0.15
   hsv_v: 0.15
+

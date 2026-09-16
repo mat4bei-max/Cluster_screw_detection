@@ -54,6 +54,33 @@ experiment_series:
   # Re-run each parameter combination with generated seeds derived from
   # training_params.seed
 
+  artifacts:
+    keep_weights: best
+    # all: keep all weights, best: keep only best.pt, none: remove all weights
+
+    keep_test_metrics: false
+    # Keep Evaluation/test_metrics Ultralytics validation artifacts
+
+    keep_test_predictions: false
+    # Keep Evaluation/test_predictions prediction images
+
+eval_metrics:
+  ranking_metric:
+    path: map
+    # Metric used to rank aggregated parameter configs. Common values:
+    # map, map50, mp, mr, f1
+
+    mode: max
+    # max or min
+
+  summary_metrics:
+    - map
+    - map50
+    - mp
+    - mr
+    - f1
+    # Metrics listed in run/config summaries and plots
+
 # ------------------------------------------------------------
 # Core training parameters
 # ------------------------------------------------------------

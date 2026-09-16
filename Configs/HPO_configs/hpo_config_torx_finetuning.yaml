@@ -92,5 +92,6 @@ search_space:
 
   training_params.trainability_policy:
     type: categorical
-    choices: [full, backbone_frozen, neck_head, head_and_last_stage, head_only]
+    choices: [full, backbone_frozen, head_and_last_stage, head_only]
     # Optional fine-tuning policy search
+

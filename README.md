@@ -1,4 +1,4 @@
-# YOLO Project Workflow
+﻿# YOLO Project Workflow
 
 This repository follows the standard `yolo_manager` project layout for YOLO
 dataset building, training, evaluation, experiment tracking, and optional online
@@ -142,9 +142,7 @@ training_params:
 Available policies:
 
 - `full`: normal training behavior
-- `head_only`: train only the task head
-- `neck_head`: train neck and head
-- `head_and_last_stage`: train the task head and its direct input feature modules
+- `head_only`: train only the task head- `head_and_last_stage`: train the task head and its direct input feature modules
 - `backbone_frozen`: freeze the YAML backbone, train the rest
 - `custom_prefixes`: train only parameters matching `trainability_prefixes`
 
@@ -162,6 +160,21 @@ experiment_series:
   enable: true
   mode: grid
   seed_repeats: 2
+  artifacts:
+    keep_weights: best        # all | best | none
+    keep_test_metrics: false
+    keep_test_predictions: false
+
+eval_metrics:
+  ranking_metric:
+    path: f1                  # map, map50, mp, mr, or f1
+    mode: max                 # max | min
+  summary_metrics:
+    - map
+    - map50
+    - mp
+    - mr
+    - f1
 
 training_params:
   learning_rate: {0.008, 0.001}
@@ -184,11 +197,16 @@ Series outputs are written below the experiment folder:
 Experiments/<experiment_group>/<experiment_name>/
     series_config.yaml
     manifest.json
-    summary.csv
     summary.json
-    summary.md
+    summary_by_run.csv
+    summary_by_config.csv
+    parameter_effects.csv
+    report.md
     plots/
-        metrics_by_run.html
+        ranking_metric_by_config.png
+        seed_variance_by_config.png
+        metric_overview_by_config.png
+        parameter_effects_<ranking-metric>.png
     runs/
         run_001/
             Run/
@@ -199,6 +217,18 @@ Experiments/<experiment_group>/<experiment_name>/
 
 Each run stores a concrete `configuration/train_config.yaml` with the selected
 scalar values and generated seed.
+
+`summary_by_run.csv` stores one row per seed/run. `summary_by_config.csv`
+aggregates seed repeats per parameter combination and adds a rank based on
+`eval_metrics.ranking_metric`. `parameter_effects.csv` estimates exploratory
+main effects for each varied parameter value. `f1` is derived from mean
+precision (`mp`) and mean recall (`mr`). `output_dir` is kept in
+`manifest.json`, but omitted from the summary tables.
+
+For large series, `experiment_series.artifacts` controls per-run storage. The
+small `Evaluation/metrics.json` is always kept. `keep_weights: best` removes
+`last.pt` and epoch checkpoints while keeping `best.pt`; `keep_weights: none`
+removes all weight files.
 
 ### Fitness Target
 
@@ -407,7 +437,7 @@ search_space:
 
   training_params.trainability_policy:
     type: categorical
-    choices: [full, backbone_frozen, neck_head, head_and_last_stage, head_only]
+    choices: [full, backbone_frozen, head_and_last_stage, head_only]
 ```
 
 Synthetic HPO entries are supported when a synthetic config is provided:
@@ -445,3 +475,4 @@ them after each dataset build or training run with:
 - known limitations
 - intended use and deployment notes
 - experiment history and release decisions
+
