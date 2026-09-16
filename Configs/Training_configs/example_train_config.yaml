@@ -55,35 +55,120 @@ experiment_series:
   # training_params.seed
 
   artifacts:
-    keep_weights: best
+    keep_weights: all
     # all: keep all weights, best: keep only best.pt, none: remove all weights
-
-    keep_test_metrics: false
+    keep_test_metrics: true
     # Keep Evaluation/test_metrics Ultralytics validation artifacts
-
-    keep_test_predictions: false
+    keep_test_predictions: true
     # Keep Evaluation/test_predictions prediction images
 
 eval_metrics:
   ranking_metric:
     path: map
-    # Metric used to rank aggregated parameter configs. Common values:
-    # map, map50, mp, mr, f1
-
+    # Metric used to rank aggregated parameter configs. Common values: map, map50, mp, mr, f1
     mode: max
     # max or min
 
-  summary_metrics:
-    - map
-    - map50
-    - mp
-    - mr
-    - f1
-    # Metrics listed in run/config summaries and plots
+  summary_metrics: [map, map50, mp, mr, f1]
+  # Metrics listed in run/config summaries and plots
 
 # ------------------------------------------------------------
 # Core training parameters
 # ------------------------------------------------------------
 training_params:
+  epochs: 800
+  # Total number of training epochs
+  # High values allow convergence, especially for large datasets
+
+  early_stopping:
+    enable: true
+    patience: 100
+  # Early stopping configuration
+
   trainability_policy: full
+  # Policy for which parts of the model are trainable: full, head_only, head_and_last_stage, backbone_frozen
+
+  batch_size: -1
+  # Number of images per batch
+  # Limited by GPU memory; larger batches give smoother gradients (-1 for automatic)
+
+  learning_rate: 0.005
+  # Initial learning rate
+  # Too high â†’ unstable training, too low â†’ slow convergence
+
+  optimizer: AdamW
+  # Optimizer choice: SGD, Adam, AdamW
+  # AdamW is generally a safe default for YOLO
+
+  img_size: 960
+  # Input image resolution (must be multiple of 32)
+  # Higher values improve small-object detection but increase memory usage
+
+  multi_scale: false
+  # Randomly varies image size during training
+  # Improves robustness across scales but slightly slows training
+
+  weight_decay: 0.0005
+  # L2 regularization strength
+  # Helps prevent overfitting, especially on small datasets
+
+  seed: 333
+  # Random seed for reproducibility
+  # Affects data shuffling, augmentation randomness, initialization
+
+# ------------------------------------------------------------
+# Runtime & hardware settings
+# ------------------------------------------------------------
+runtime_settings:
+  device: 0
+  # Training device:
+  # 0,1,2,... â†’ GPU index
+  # None      â†’ CPU (very slow for YOLO)
+
+  workers: 2
+  # Number of dataloader worker processes
+  # 0 recommended for Windows
+  # 4â€“16 recommended for Linux depending on CPU
+
+  amp: true
+  # Automatic Mixed Precision (FP16)
+  # true  â†’ faster training & lower memory usage
+  # false â†’ more numerical stability (rarely needed)
+
+# ------------------------------------------------------------
+# Data augmentation configuration
+# ------------------------------------------------------------
+augmentation_config:
+  augmentation: true
+  # Global switch for all augmentations
+  # false disables ALL augmentations below
+
+  flipud: 0.0
+  # Vertical flip probability
+  # Usually disabled for natural images (cars, people, animals)
+
+  fliplr: 0.5
+  # Horizontal flip probability
+  # Very common and safe augmentation
+
+  mosaic: 1.0
+  # Mosaic augmentation probability
+  # Combines 4 images into one
+  # Powerful for small-object detection but may slow convergence
+
+  mixup: 0.0
+  # MixUp augmentation probability
+  # Improves generalization but can hurt localization accuracy
+
+  hsv_h: 0.015
+  # Hue augmentation strength
+  # Small values are sufficient; too high distorts colors
+
+  hsv_s: 0.7
+  # Saturation augmentation strength
+  # Improves robustness to lighting and camera differences
+
+  hsv_v: 0.4
+  # Value (brightness) augmentation strength
+  # Helps with varying illumination conditions
 

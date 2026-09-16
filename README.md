@@ -93,16 +93,21 @@ Experiments/<experiment_group>/<experiment_name>/
 Use `-o` only when an existing experiment should be overwritten. The CLI asks for
 confirmation before overwriting.
 
-Early stopping patience is configured with the training parameters:
+Early stopping is configured with the training parameters:
 
 ```yaml
 training_params:
   epochs: 300
-  patience: 100  # 0 disables early stopping
+  early_stopping:
+    enable: true
+    patience: 100
 ```
 
-`patience` counts epochs without validation-fitness improvement. If omitted,
-the Ultralytics default remains active.
+`patience` counts epochs without validation-fitness improvement. The monitored
+fitness is the configured `training_params.target`; if no target is configured,
+Ultralytics' default detection fitness is used. Set `enable: false` to disable
+early stopping. If the whole `early_stopping` block is omitted, the Ultralytics
+default remains active. Legacy `training_params.patience` is still accepted.
 
 ### Base Models and Fine-Tuning
 

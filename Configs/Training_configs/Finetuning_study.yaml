@@ -5,19 +5,20 @@ setup:
     experiment_group: Universal_screw_detection
     experiment_name: 3.7
     weights: best.pt
-
   experiment_group: Finetuning_study
-  experiment_name: Finetuning_hp_series_2
+  experiment_name: Finetuning_hp_series_3
+
 dataset:
   family: finetuning_study
-  name: aubaac_step_test
+  name: miele_step_test
+
 experiment_series:
   enable: true
   mode: grid
   sample_runs: null
   seed_repeats: 2
   artifacts:
-    keep_weights: best
+    keep_weights: none
     keep_test_metrics: false
     keep_test_predictions: false
 
@@ -25,12 +26,7 @@ eval_metrics:
   ranking_metric:
     path: f1
     mode: max
-  summary_metrics:
-    - map
-    - map50
-    - mp
-    - mr
-    - f1
+  summary_metrics: [map, map50, mp, mr, f1]
 
 training_params:
   trainability_policy: {head_only, head_and_last_stage, backbone_frozen}
@@ -43,12 +39,12 @@ training_params:
 
   epochs: 1000
   batch_size: 2
-  learning_rate: {0.05, 0.01, 0.005, 0.001, 0.0001}
+  learning_rate: {0.01, 0.005, 0.001}
   optimizer: AdamW
   img_size: 1280
   multi_scale: false
-  weight_decay: {0.0, 0.001, 0.01}
-  seed: 697859
+  weight_decay: {0.0, 0.01}
+  seed: 36572
 
 runtime_settings:
   device: 0
