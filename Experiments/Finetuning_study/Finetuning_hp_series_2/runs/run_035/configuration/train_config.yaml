@@ -1,0 +1,43 @@
+setup:
+  yolo_base_model:
+    experiment_group: Universal_screw_detection
+    experiment_name: 3.7
+    weights: best.pt
+  experiment_group: Finetuning_study
+  experiment_name: Finetuning_hp_series_2
+dataset:
+  family: finetuning_study
+  name: aubaac_step_test
+experiment_series:
+  enable: false
+  mode: grid
+  sample_runs: null
+  seed_repeats: 2
+training_params:
+  trainability_policy: head_and_last_stage
+  target:
+    precision: 0.0
+    recall: 0.6
+    map50: 0.0
+    map50_95: 0.4
+  epochs: 1000
+  batch_size: 2
+  learning_rate: 0.05
+  optimizer: AdamW
+  img_size: 1280
+  multi_scale: false
+  weight_decay: 0.01
+  seed: 205191617
+runtime_settings:
+  device: 0
+  workers: 8
+  amp: true
+augmentation_config:
+  augmentation: true
+  flipud: 0.3
+  fliplr: 0.5
+  mosaic: 0.1
+  mixup: 0.0
+  hsv_h: 0.01
+  hsv_s: 0.15
+  hsv_v: 0.15
