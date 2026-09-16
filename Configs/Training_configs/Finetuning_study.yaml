@@ -7,12 +7,10 @@ setup:
     weights: best.pt
 
   experiment_group: Finetuning_study
-  experiment_name: Finetuning_hp_series_test
-
+  experiment_name: Finetuning_hp_series_2
 dataset:
   family: finetuning_study
-  name: mock_battery_step_test
-
+  name: aubaac_step_test
 experiment_series:
   enable: true
   mode: grid
@@ -35,8 +33,7 @@ eval_metrics:
     - f1
 
 training_params:
-  trainability_policy: {head_only, backbone_frozen}
-  # , head_and_last_stage,
+  trainability_policy: {head_only, head_and_last_stage, backbone_frozen}
 
   target:
     precision: 0.0
@@ -46,14 +43,12 @@ training_params:
 
   epochs: 1000
   batch_size: 2
-  learning_rate: 0.001
-  #learning_rate: {0.01, 0.001, 0.0001, 0.00001}
+  learning_rate: {0.05, 0.01, 0.005, 0.001, 0.0001}
   optimizer: AdamW
   img_size: 1280
   multi_scale: false
-  weight_decay: 0.0
-  #weight_decay: {0.0, 0.001}
-  seed: 7195321
+  weight_decay: {0.0, 0.001, 0.01}
+  seed: 697859
 
 runtime_settings:
   device: 0
