@@ -6,11 +6,11 @@ setup:
     experiment_name: 3.7
     weights: best.pt
   experiment_group: Finetuning_x_shot_study
-  experiment_name: Finetuning_mock_battery_10_shot
+  experiment_name: Finetuning_mock_battery_15_shot
 
 dataset:
   family: finetuning_study
-  name: mock_battery_10_shot
+  name: mock_battery_15_shot
 
 
 training_params:
