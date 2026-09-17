@@ -9,7 +9,7 @@ setup:
   experiment_name: Finetuning_miele_15_shot
 
 dataset:
-  family: finetuniSg_study
+  family: finetuning_study
   name: miele_15_shot
 
 

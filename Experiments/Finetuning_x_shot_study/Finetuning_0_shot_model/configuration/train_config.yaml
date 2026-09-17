@@ -1,0 +1,29 @@
+setup:
+  yolo_base_model: yolo26s.pt
+  model_name: Universal_screw_detection
+  version: 3.7
+  dataset:
+    family: igmr_universal_dataset
+    name: v4
+training_params:
+  epochs: 800
+  batch_size: 8
+  learning_rate: 0.008
+  optimizer: AdamW
+  img_size: 1280
+  multi_scale: false
+  weight_decay: 6.0e-06
+  seed: 235213
+runtime_settings:
+  device: 0
+  workers: 8
+  amp: true
+augmentation_config:
+  augmentation: true
+  flipud: 0.2
+  fliplr: 0.5
+  mosaic: 0.2
+  mixup: 0.1
+  hsv_h: 0.01
+  hsv_s: 0.15
+  hsv_v: 0.15

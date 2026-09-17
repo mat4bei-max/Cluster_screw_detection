@@ -1,0 +1,93 @@
+setup:
+  data: Synthetic_screws
+  num_synthetic_train_samples: 50
+placement:
+  objects_per_image:
+    min: 0
+    max: 8
+  enable_shuffle_cycle:
+    objects: true
+    backgrounds: true
+  placement_zones:
+    activate: true
+    zone_values:
+    - pixel_value: 0
+      probability: 0.0
+      tolerance: 0
+    - pixel_value: 127
+      probability: 0.2
+      tolerance: 3
+    - pixel_value: 255
+      probability: 1.0
+      tolerance: 3
+  placement_rules:
+    scale_range:
+    - 0.6
+    - 1.1
+    rotation_range:
+    - -180
+    - 180
+    min_bbox_size_px: 18
+    min_center_distance_px: 40
+compositing:
+  opacity: 1.0
+  edge_feathering:
+    enabled: true
+    kernel_size: 2
+    sigma: 1
+  edge_blur:
+    enabled: true
+    kernel_size: 3
+  color_harmonization:
+    enabled: true
+    strength: 0.3
+augmentation:
+  background:
+    resolution:
+      min_side: null
+      max_side: 1600
+    brightness_contrast:
+      enabled: true
+      probability: 0.3
+      limits:
+      - -0.15
+      - 0.15
+    blur:
+      enabled: true
+      probability: 0.1
+      kernel_size: 3
+    noise:
+      enabled: true
+      probability: 0.05
+      var_limit:
+      - 5.0
+      - 10.0
+    hsv_shift:
+      enabled: true
+      probability: 0.2
+      limits:
+      - 10
+      - 10
+      - 10
+  objects:
+    brightness_contrast:
+      enabled: true
+      probability: 0.2
+      limits:
+      - -0.15
+      - 0.15
+    blur:
+      enabled: true
+      probability: 0.05
+      kernel_size: 2
+    noise:
+      enabled: true
+      probability: 0.05
+      var_limit:
+      - 5.0
+      - 10.0
+    anti_halo:
+      enabled: true
+      edge_width_px: 2
+      dark_edge_luminance_delta: 5
+      blend_strength: 0.3

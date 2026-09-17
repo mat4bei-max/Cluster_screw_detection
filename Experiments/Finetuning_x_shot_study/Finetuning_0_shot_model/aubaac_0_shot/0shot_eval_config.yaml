@@ -1,0 +1,53 @@
+﻿# ============================================================
+# Example YOLO evaluation configuration
+# ============================================================
+# This config uses logical names from the standard project
+# structure instead of direct file paths.
+# ============================================================
+
+# ------------------------------------------------------------
+# Evaluation, model & dataset setup
+# ------------------------------------------------------------
+setup:
+  evaluation_name: aubaac_0_shot
+  # Output folder under Experiments/
+
+  experiment_group: Finetuning_x_shot_study
+  # Model family folder under Experiments/
+
+  experiment_name: Finetuning_0_shot_model
+  # Model version folder is resolved as Experiments/<experiment_group>/<experiment_name>
+ 
+  split: test
+  # Dataset split to evaluate: val or test
+
+dataset:
+  family: finetuning_study
+  # Dataset family folder below project_name/Datasets
+
+  name: aubaac_15_shot
+  # Dataset folder below project_name/Datasets/<family>
+
+# ------------------------------------------------------------
+# Model checkpoint selection
+# ------------------------------------------------------------
+model:
+  weights: best.pt
+  # Checkpoint file under Run/weights, e.g. best.pt or last.pt
+
+# ------------------------------------------------------------
+# Validation parameters passed to Ultralytics model.val()
+# ------------------------------------------------------------
+validation_params:
+  imgsz: 640
+  # Image size for validation
+
+  batch: 2
+  # Batch size
+
+  conf: 0.4
+  # Confidence threshold
+
+  iou: 0.7
+  # IoU threshold for NMS
+
