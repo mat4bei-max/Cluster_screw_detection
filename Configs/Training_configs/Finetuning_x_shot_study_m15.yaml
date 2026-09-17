@@ -6,10 +6,10 @@ setup:
     experiment_name: 3.7
     weights: best.pt
   experiment_group: Finetuning_x_shot_study
-  experiment_name: Finetuning_miele_15_shot
+  experiment_name: Finetuning_miele_15_shot_
 
 dataset:
-  family: finetuniSg_study
+  family: finetuning_study
   name: miele_15_shot
 
 
@@ -18,9 +18,9 @@ training_params:
 
   target:
     precision: 0.0
-    recall: 0.6
-    map50: 0.0S
-    map50_95: 0.4
+    recall: 0.0
+    map50: 0.5
+    map50_95: 0.5
 
   epochs: 1000
   batch_size: 2
