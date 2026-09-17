@@ -6,14 +6,14 @@ setup:
   experiment_group: Finetuning_x_shot_study
   experiment_name: Finetuning_miele_15_shot
 dataset:
-  family: finetuniSg_study
+  family: finetuning_study
   name: miele_15_shot
 training_params:
   trainability_policy: head_and_last_stage
   target:
     precision: 0.0
     recall: 0.6
-    map50: 0.0S
+    map50: 0.0
     map50_95: 0.4
   epochs: 1000
   batch_size: 2
